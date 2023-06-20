@@ -1,0 +1,74 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.container{
+  min-height: 100%;
+  height: fit-content;
+  padding: 0px 32px;
+  display: flex;
+  flex-direction: column;
+
+ @include desktop{
+   padding: 0 103px;
+   flex-direction: row;
+ } 
+
+  .smileyPop{
+    display: none;
+    
+    @include desktop {
+      position:absolute;
+      display: block;
+      transform: rotate(15deg);
+      width: 38vw;
+      height: 43vw;
+      left: -5vw;
+      bottom: -10vw;
+    }
+  }
+
+  .welcome{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .welcomeHeader{
+      width:287px;
+      height: fit-content;
+
+      @include desktop{
+        width: 541px;
+        height: fit-content;
+        font-size: 2.25rem;
+      }
+
+      span{
+        background: linear-gradient(to right,$primary-color, $accent-color 75%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .welcomeText{
+      width: 271px;
+      height: 117px;
+
+      @include desktop{
+        width: 534px;
+        height: fit-content;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .buttonGroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .codeButton{
+      background-color: $primary-light-color;
+    }
+  }
+}

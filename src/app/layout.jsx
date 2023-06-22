@@ -2,7 +2,7 @@ import "@/styles/reset.scss";
 import styles from "./layout.module.scss";
 import Image from "next/image";
 
-import logo from "/images/logo.png";
+import logo from "@/../public/images/logo.png";
 
 export const metadata = {
   title: "Popi",

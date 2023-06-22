@@ -2,9 +2,9 @@ import WelcomeButtonLink from "./components/WelcomeButtonLink";
 import styles from "./style.module.scss";
 import Image from "next/image";
 
-import smiley from "/images/smiley.png";
-import code from "/images/code.png";
-import group from "/images/group.png";
+import smiley from "@/../public/images/smiley.png";
+import code from "@/../public/images/code.png";
+import group from "@/../public/images/group.png";
 
 function HomeView() {
   return (

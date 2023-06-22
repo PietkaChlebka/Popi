@@ -37,6 +37,10 @@
     padding-top: 123px;
     min-height: fit-content;
     height: 100vh;
+
+    @include desktop{
+      padding-top: 93px;
+    }
    }
   }
 

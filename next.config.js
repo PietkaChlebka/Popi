@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  images: { unoptimized: true },
+  images: {
+    unoptimized: true,
+    path: "/",
+    loader: "akamai",
+    disableStaticImages: true,
+  },
 };
 
 module.exports = nextConfig;

@@ -2,11 +2,15 @@ import WelcomeButtonLink from "./components/WelcomeButtonLink";
 import styles from "./style.module.scss";
 import Image from "next/image";
 
+import smiley from "@/../public/images/smiley.png";
+import code from "@/../public/images/code.png";
+import group from "@/../public/images/group.png";
+
 function HomeView() {
   return (
     <div className={styles.container}>
       <div className={styles.smileyPop}>
-        <Image src="/images/smiley.png" fill />
+        <Image src={smiley} fill />
       </div>
       <div className={styles.welcome}>
         <h2 className={styles.welcomeHeader}>
@@ -18,11 +22,8 @@ function HomeView() {
         </p>
       </div>
       <div className={styles.buttonGroup}>
-        <WelcomeButtonLink
-          image="/images/code.png"
-          className={styles.codeButton}
-        />
-        <WelcomeButtonLink image="/images/group.png" />
+        <WelcomeButtonLink image={code} className={styles.codeButton} />
+        <WelcomeButtonLink image={group} />
       </div>
     </div>
   );

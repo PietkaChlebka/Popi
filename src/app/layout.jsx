@@ -2,6 +2,8 @@ import "@/styles/reset.scss";
 import styles from "./layout.module.scss";
 import Image from "next/image";
 
+import logo from "/images/logo.png";
+
 export const metadata = {
   title: "Popi",
   description: "Best app for movie selection!",
@@ -13,7 +15,7 @@ export default function RootLayout({ children }) {
       <body className={styles.pageBody}>
         <header className={styles.header}>
           <div className={styles.logoImage}>
-            <Image src="/images/logo.png" fill />
+            <Image src={logo} fill />
           </div>
           <h1>Popi.com</h1>
         </header>

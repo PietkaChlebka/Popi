@@ -23,7 +23,7 @@ function HomeView() {
       </div>
       <div className={styles.buttonGroup}>
         <WelcomeButtonLink image={code} className={styles.codeButton} />
-        <WelcomeButtonLink image={group} />
+        <WelcomeButtonLink image={group} className={styles.groupButton} />
       </div>
     </div>
   );

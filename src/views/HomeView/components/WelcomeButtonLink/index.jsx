@@ -13,13 +13,13 @@ function WelcomeButtonLink({
   link,
 }) {
   return (
-    <Link href={link ? link : ""}>
-      <button className={classNames([styles.button, className])}>
+    <button className={classNames([styles.button, className])}>
+      <Link href={link ? link : ""}>
         <div className={styles.buttonImgContainer}>
           <Image src={image} alt={imageAlt} fill />
         </div>
-      </button>
-    </Link>
+      </Link>
+    </button>
   );
 }
 

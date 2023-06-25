@@ -1,0 +1,26 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.button{
+  height: fit-content;
+  width: fit-content;
+  padding: 7vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2vw;
+  background-color: $primary-color;
+  box-shadow: $shadowSmall;
+  color: $white;
+  outline: none;
+  border: none;
+  border-radius: 8vw;
+  font-size: 2rem;
+  font-weight: bold;
+  
+
+  .buttonImgContainer{
+    height: 13vw;
+    width: 13vw;
+  }
+}

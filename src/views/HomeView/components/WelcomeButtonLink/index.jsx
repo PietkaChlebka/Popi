@@ -14,7 +14,7 @@ function WelcomeButtonLink({
 }) {
   return (
     <button className={classNames([styles.button, className])}>
-      <Link href={link ? link : ""}>
+      <Link className={styles.link} href={link ? link : ""}>
         <div className={styles.buttonImgContainer}>
           <Image src={image} alt={imageAlt} fill />
         </div>

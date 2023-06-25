@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <body className={styles.pageBody}>
         <header className={styles.header}>
           <div className={styles.logoImage}>
-            <Image src={logo} fill />
+            <Image src={logo} alt={"logo"} fill />
           </div>
           <h1>Popi.com</h1>
         </header>

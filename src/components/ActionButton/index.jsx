@@ -7,7 +7,7 @@ function ActionButton({ image, imageAlt, label, className, action }) {
     <button className={classNames([styles.button, className])} onClick={action}>
       {label ? <div className={styles.label}>{label}</div> : null}
       <div className={styles.buttonImgContainer}>
-        <Image src={image} alt={imageAlt} fill />
+        <Image src={image} alt={imageAlt || ""} fill />
       </div>
     </button>
   );

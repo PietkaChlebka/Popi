@@ -16,7 +16,7 @@ function WelcomeButtonLink({
     <button className={classNames([styles.button, className])}>
       <Link className={styles.link} href={link ? link : ""}>
         <div className={styles.buttonImgContainer}>
-          <Image src={image} alt={imageAlt} fill />
+          <Image src={image} alt={imageAlt || ""} fill />
         </div>
       </Link>
     </button>

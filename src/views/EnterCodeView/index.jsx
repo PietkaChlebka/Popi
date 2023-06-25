@@ -11,7 +11,7 @@ function EnterCodeView() {
     <div className={styles.container}>
       <div className={styles.enterCodeContainer}>
         <div className={styles.codeImgContainer}>
-          <Image src={code} fill />
+          <Image src={code} alt={"code icon"} fill />
         </div>
         <form className={styles.codeBox}>
           <label htmlFor="code">Your Party Code:</label>

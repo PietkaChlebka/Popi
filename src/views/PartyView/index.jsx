@@ -16,7 +16,7 @@ function PartyView() {
     const code = localStorage.getItem("currentParty")?.toString();
     if (code) {
       setPartyCode(code);
-      setParty(JSON.parse(code));
+      setParty(JSON.parse(localStorage.getItem(code)));
     }
   }, []);
 

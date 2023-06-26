@@ -10,7 +10,7 @@ function HomeView() {
   return (
     <div className={styles.container}>
       <div className={styles.smileyPop}>
-        <Image src={smiley} fill />
+        <Image src={smiley} alt={"smiley popcorn"} fill />
       </div>
       <div className={styles.welcome}>
         <h2 className={styles.welcomeHeader}>

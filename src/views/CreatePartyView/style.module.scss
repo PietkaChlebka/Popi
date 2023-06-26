@@ -14,11 +14,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vw;
+    height: fit-content;
     width: 75vw;
     background-color: $white;
     border-radius: 15vw;
     box-shadow: $shadowBig;
+    padding: 13vw 4vw;
 
     .groupImgContainer{
       width: 7rem;
@@ -51,6 +52,22 @@
         font-size: 1rem;
         border-radius: 15vw;
       }
+    }
+
+    .infoHeader{
+      text-align: center;
+    }
+
+    .uniqueCode{
+      color: $textGrey;
+      padding: 5vw;
+      font-size: 1.5rem;
+    }
+
+    .textInfo{
+      text-align: center;
+      font-size: 1.3rem;
+      padding: 0 7vw 2vw;
     }
   }
 

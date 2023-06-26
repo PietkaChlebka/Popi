@@ -2,16 +2,18 @@
 import styles from "./style.module.scss";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 import confirm from "@/../public/images/confirm.png";
 import smiley from "@/../public/images/smiley.png";
 import group from "@/../public/images/group-gold.svg";
+import lock from "@/../public/images/lock.png";
 import ActionButton from "@/components/ActionButton";
 
 function CreatePartyView() {
   const router = useRouter();
   const inputRef = useRef(null);
+  const [partyCreated, setPartyCreated] = useState(null);
 
   const generateCode = () => {
     const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -48,7 +50,10 @@ function CreatePartyView() {
     };
 
     localStorage.setItem(code, JSON.stringify(party));
+    setPartyCreated(code);
+  };
 
+  const navigate = () => {
     router.push("/party");
   };
 
@@ -56,19 +61,36 @@ function CreatePartyView() {
     <div className={styles.container}>
       <div className={styles.createPartyContainer}>
         <div className={styles.groupImgContainer}>
-          <Image src={group} alt={"group icon"} fill />
+          <Image src={partyCreated ? lock : group} alt={"group icon"} fill />
         </div>
-        <form className={styles.nameBox} onSubmit={createPartyHandler}>
-          <label htmlFor="name">Enter Your Party Name:</label>
-          <input type="text" name="name" placeholder="XXXXXX" ref={inputRef} />
-        </form>
+        {partyCreated ? (
+          <>
+            <h2 className={styles.infoHeader}>
+              Great! Here is your unique Party Code!
+            </h2>
+            <p className={styles.uniqueCode}>{partyCreated}</p>
+            <p className={styles.textInfo}>
+              Save it! It will allow you to access your Party anytime! :)
+            </p>
+          </>
+        ) : (
+          <form className={styles.nameBox} onSubmit={createPartyHandler}>
+            <label htmlFor="name">Enter Your Party Name:</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="XXXXXX"
+              ref={inputRef}
+            />
+          </form>
+        )}
       </div>
       <div className={styles.actionBtnContainer}>
         <ActionButton
           className={styles.enterCodeBtn}
           label={"Confirm"}
           image={confirm}
-          action={createPartyHandler}
+          action={partyCreated ? navigate : createPartyHandler}
         />
       </div>
     </div>

@@ -14,12 +14,17 @@ function CreatePartyView() {
   const inputRef = useRef(null);
 
   const generateCode = () => {
-    const min = 100000;
-    const max = 999999;
-
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const codeLen = 6;
     let code = null;
+
     do {
-      code = Math.floor(Math.random() * (max - min) + min).toString();
+      code = "";
+      for (let i = 0; i < codeLen; i++) {
+        code += characters.charAt(
+          Math.floor(Math.random() * characters.length)
+        );
+      }
     } while (localStorage.getItem(code) !== null);
 
     return code;

@@ -1,0 +1,23 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.groupImgContainer{
+  width: 40px;
+  height: 40px;
+}
+
+.filmList{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: $white;
+  padding: 10px;
+
+.film{
+  width: 100px;
+  height: 180px;
+  background-color: $tonedBrown;
+  
+}
+
+}

@@ -1,0 +1,14 @@
+<svg width="192" height="165" viewBox="0 0 192 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="125" y="139.5" width="14" height="6" rx="3" transform="rotate(90 125 139.5)" fill="white"/>
+<rect x="108" y="139.5" width="14" height="6" rx="3" transform="rotate(90 108 139.5)" fill="white"/>
+<rect x="90" y="139.5" width="14" height="6" rx="3" transform="rotate(90 90 139.5)" fill="white"/>
+<rect x="73" y="139.5" width="14" height="6" rx="3" transform="rotate(90 73 139.5)" fill="white"/>
+<path d="M137.5 161.5H54.5C53.3954 161.5 52.5 160.605 52.5 159.5V150.346C52.5 150.117 52.5359 149.897 52.6161 149.682C56.1352 140.25 69.5009 122 96 122C122.499 122 135.865 140.25 139.384 149.682C139.464 149.897 139.5 150.117 139.5 150.346V159.5C139.5 160.605 138.605 161.5 137.5 161.5Z" stroke="white" stroke-width="6"/>
+<path d="M62 119H5C3.89543 119 3 118.105 3 117V111.191C3 110.964 3.03556 110.744 3.11528 110.532C5.63374 103.82 15.0042 91 33.5 91C51.9958 91 61.3663 103.82 63.8847 110.532C63.9644 110.744 64 110.964 64 111.191V117C64 118.105 63.1046 119 62 119Z" stroke="white" stroke-width="6"/>
+<path d="M187 119H130C128.895 119 128 118.105 128 117V111.191C128 110.964 128.036 110.744 128.115 110.532C130.634 103.82 140.004 91 158.5 91C176.996 91 186.366 103.82 188.885 110.532C188.964 110.744 189 110.964 189 111.191V117C189 118.105 188.105 119 187 119Z" stroke="white" stroke-width="6"/>
+<circle cx="96" cy="87" r="23" stroke="white" stroke-width="6"/>
+<circle cx="33.5" cy="62.5" r="18.5" stroke="white" stroke-width="6"/>
+<circle cx="158.5" cy="62.5" r="18.5" stroke="white" stroke-width="6"/>
+<circle cx="122.5" cy="20.5" r="17.5" stroke="white" stroke-width="6"/>
+<circle cx="69.5" cy="20.5" r="17.5" stroke="white" stroke-width="6"/>
+</svg>

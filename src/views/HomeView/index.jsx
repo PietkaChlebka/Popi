@@ -3,14 +3,14 @@ import styles from "./style.module.scss";
 import Image from "next/image";
 
 import smiley from "@/../public/images/smiley.png";
-import code from "@/../public/images/code.png";
-import group from "@/../public/images/group.png";
+import code from "@/../public/images/code-white.svg";
+import group from "@/../public/images/group-white.svg";
 
 function HomeView() {
   return (
     <div className={styles.container}>
       <div className={styles.smileyPop}>
-        <Image src={smiley} fill />
+        <Image src={smiley} alt={"smiley popcorn"} fill />
       </div>
       <div className={styles.welcome}>
         <h2 className={styles.welcomeHeader}>
@@ -22,8 +22,18 @@ function HomeView() {
         </p>
       </div>
       <div className={styles.buttonGroup}>
-        <WelcomeButtonLink image={code} className={styles.codeButton} />
-        <WelcomeButtonLink image={group} className={styles.groupButton} />
+        <WelcomeButtonLink
+          image={code}
+          imageAlt="code icon"
+          className={styles.codeButton}
+          link="/enterCode"
+        />
+        <WelcomeButtonLink
+          image={group}
+          imageAlt="group icon"
+          className={styles.partyButton}
+          link="/createParty"
+        />
       </div>
     </div>
   );

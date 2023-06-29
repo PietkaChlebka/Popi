@@ -138,7 +138,11 @@ function UserProfileView() {
                       saveUserFilm(film);
                     }}
                   >
-                    <Image src={imageUrl + film.poster_path} fill />
+                    <Image
+                      src={imageUrl + film.poster_path}
+                      alt="film poster"
+                      fill
+                    />
                   </div>
                 ))
               ) : (
@@ -158,12 +162,17 @@ function UserProfileView() {
                       deleteUserFilm(index);
                     }}
                   >
-                    <Image src={imageUrl + film.poster_path} fill />
+                    <Image
+                      src={imageUrl + film.poster_path}
+                      alt="film poster"
+                      fill
+                    />
                   </div>
                 ))
               ) : (
                 <p>
-                  Seems you don't have any films added. Let's change that! :)
+                  Seems you don&apos;t have any films added. Let&apos;s change
+                  that! :)
                 </p>
               )}
             </div>

@@ -4,6 +4,7 @@ import styles from "./style.module.scss";
 import Image from "next/image";
 
 import back from "@/../public/images/back.png";
+import userIcon from "@/../public/images/user.png";
 import search from "@/../public/images/search.png";
 import add from "@/../public/images/add.png";
 import confirm from "@/../public/images/confirm.png";
@@ -108,10 +109,12 @@ function UserProfileView() {
   return (
     <div className={styles.container}>
       <div className={styles.userContainer}>
-        <div className={styles.groupImgContainer}>
-          <Image src={group} alt="group icon" fill />
+        <div className={styles.userInfo}>
+          <div className={styles.userImgContainer}>
+            <Image src={userIcon} alt="user icon" fill />
+          </div>
+          <p className={styles.usersHeader}>{user?.name}</p>
         </div>
-        <p className={styles.usersHeader}>{user?.name}</p>
         {searching ? (
           <div className={styles.libraryContainer}>
             <form
@@ -166,32 +169,32 @@ function UserProfileView() {
             </div>
           </div>
         )}
-        {searching ? (
-          <div className={styles.actionBtnContainer}>
-            <ActionButton
-              className={styles.backBtn}
-              action={closeFilmSearch}
-              image={back}
-              imageAlt={"back icon"}
-            />
-            <ActionButton
-              className={styles.searchFilmBtn}
-              action={searchHandler}
-              image={search}
-              imageAlt={"search icon"}
-            />
-          </div>
-        ) : (
-          <div className={styles.actionBtnContainer}>
-            <ActionButton
-              className={styles.addFilmBtn}
-              action={openFilmSearch}
-              image={add}
-              imageAlt={"add icon"}
-            />
-          </div>
-        )}
       </div>
+      {searching ? (
+        <div className={styles.actionBtnContainer}>
+          <ActionButton
+            className={styles.backBtn}
+            action={closeFilmSearch}
+            image={back}
+            imageAlt={"back icon"}
+          />
+          <ActionButton
+            className={styles.searchFilmBtn}
+            action={searchHandler}
+            image={search}
+            imageAlt={"search icon"}
+          />
+        </div>
+      ) : (
+        <div className={styles.actionBtnContainer}>
+          <ActionButton
+            className={styles.addFilmBtn}
+            action={openFilmSearch}
+            image={add}
+            imageAlt={"add icon"}
+          />
+        </div>
+      )}
     </div>
   );
 }

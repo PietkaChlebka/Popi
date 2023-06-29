@@ -3,10 +3,12 @@
 import styles from "./style.module.scss";
 import Image from "next/image";
 
+import addGold from "@/../public/images/add-gold.png";
 import confirm from "@/../public/images/confirm.png";
 import smiley from "@/../public/images/smiley.png";
 import code from "@/../public/images/code-gold.svg";
 import group from "@/../public/images/group-gold.svg";
+import userIcon from "@/../public/images/user.png";
 import ActionButton from "@/components/ActionButton";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -76,25 +78,35 @@ function PartyView() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.groupImgContainer}>
-        <Image src={group} alt="group icon" />
-      </div>
-      <p>{party?.name}</p>
-      <p>{partyCode}</p>
-      <p className={styles.usersHeader}>Users</p>
-      <ul className={styles.users}>
-        {party?.users.map((user, index) => (
-          <li
-            key={index}
-            onClick={() => {
-              seeUser(user.userCode);
-            }}
-          >
-            {user.name}
+      <div className={styles.partyContainer}>
+        <div className={styles.partyInfo}>
+          <div className={styles.groupImgContainer}>
+            <Image src={group} alt="group icon" fill />
+          </div>
+          <div className={styles.partyData}>
+            <p className={styles.partyName}>{party?.name}</p>
+            <p className={styles.partyCode}>{partyCode}</p>
+          </div>
+        </div>
+        <p className={styles.usersHeader}>Users</p>
+        <ul className={styles.users}>
+          {party?.users.map((user, index) => (
+            <li
+              key={index}
+              onClick={() => {
+                seeUser(user.userCode);
+              }}
+            >
+              <Image src={userIcon} width={24} height={24} />
+              {user.name}
+            </li>
+          ))}
+          <li onClick={addNewUser}>
+            <Image src={addGold} width={24} height={24} />
+            New user
           </li>
-        ))}
-        <li onClick={addNewUser}>New user</li>
-      </ul>
+        </ul>
+      </div>
 
       <div className={styles.actionBtnContainer}>
         <ActionButton action={""} image={group} imageAlt={""} label={"Draw"} />

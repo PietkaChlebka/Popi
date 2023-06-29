@@ -97,12 +97,12 @@ function PartyView() {
                 seeUser(user.userCode);
               }}
             >
-              <Image src={userIcon} width={24} height={24} />
+              <Image src={userIcon} width={24} height={24} alt="user icon" />
               {user.name}
             </li>
           ))}
           <li onClick={addNewUser}>
-            <Image src={addGold} width={24} height={24} />
+            <Image src={addGold} width={24} height={24} alt="add icon" />
             New user
           </li>
         </ul>

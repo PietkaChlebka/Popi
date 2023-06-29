@@ -1,0 +1,70 @@
+@import "@/styles/variables.scss";
+@import "@/styles/mixins.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4vw;
+  padding: 1vw;
+
+  .partyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+    width: 75vw;
+    background-color: $white;
+    border-radius: 15vw;
+    box-shadow: $shadowBig;
+    padding: 2vw;
+
+    .partyInfo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 4px;
+      min-height: 50px;
+
+      .groupImgContainer {
+        width: 40px;
+        height: 40px;
+      }
+
+      .partyData {
+        .partyName {
+          font-size: 1.5rem;
+        }
+
+        .partyCode {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .usersHeader {
+      font-size: 1.5rem;
+      border-bottom: 1px solid $black;
+      padding: 0.25rem;
+      width: 100%;
+      min-height: 2.5rem;
+    }
+
+    .users {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      height: 100%;
+
+      li {
+        padding: 0.25rem;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  }
+}
